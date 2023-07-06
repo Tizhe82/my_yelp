@@ -5,7 +5,7 @@ import { Button, Col, Container, Form, Row, Table } from 'react-bootstrap';
 
 import './App.css';
 import awsConfig from './aws-exports';
-import { createRestaurant } from './graphql/mutations'
+import { createRestaurant } from './graphql/mutations';
 import { listRestaurants } from './graphql/queries';
 import { onCreateRestaurant } from './graphql/subscriptions';
 
@@ -78,7 +78,7 @@ const App: React.FC = () => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
-  
+
   useEffect(() => {
     getRestaurantList();
 
